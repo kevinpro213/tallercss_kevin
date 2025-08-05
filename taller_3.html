@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyAdmin Panel</title>
+  <link rel="stylesheet" href="taller_3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>MyAdmin</h2>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Usuarios</li>
+          <li>Inventario</li>
+          <li>Ventas</li>
+          <li>Reportes</li>
+          <li>Opciones</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <input type="text" placeholder="Buscar...">
+        <div class="user-info">
+          <span>Kevin Admin</span>
+          <img src="https://via.placeholder.com/30" alt="User Avatar">
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="card">
+          <h3>Usuarios</h3>
+          <p>1,234 <span class="success">↑12%</span></p>
+        </div>
+        <div class="card">
+          <h3>Inventario</h3>
+          <p>567 <span class="success">↑8%</span></p>
+        </div>
+        <div class="card">
+          <h3>Ventas</h3>
+          <p>€45,678 <span class="success">↑23%</span></p>
+        </div>
+        <div class="card">
+          <h3>Satisfacción</h3>
+          <p>89% <span class="danger">↓2%</span></p>
+        </div>
+      </section>
+
+      <section class="users">
+        <div class="users-header">
+          <h2>Usuarios recientes</h2>
+          <button>Agregar Usuario</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>Fecha</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Ana García</td>
+              <td>ana@email.com</td>
+              <td><span class="badge admin">ADMIN</span></td>
+              <td><span class="status active">Activo</span></td>
+              <td>15/01/2024</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Carlos López</td>
+              <td>carlos@email.com</td>
+              <td><span class="badge user">USUARIO</span></td>
+              <td><span class="status active">Activo</span></td>
+              <td>12/01/2024</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>María Rodríguez</td>
+              <td>maria@email.com</td>
+              <td><span class="badge mod">MODERADOR</span></td>
+              <td><span class="status inactive">Inactivo</span></td>
+              <td>10/01/2024</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

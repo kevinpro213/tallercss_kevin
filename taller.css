@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  .tienda-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+      "header header"
+      "sidebar contenido"
+      "footer footer";
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  
+  .tienda-header {
+    grid-area: header;
+    background-color: #fffb00;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+
+  .filtros {
+    grid-area: sidebar;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-right: 2px solid #ccc;
+  }
+  
+
+  .productos-grid {
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+
+  .producto {
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .destacado {
+    background-color: #ffd700;
+  }
+  
+  
+  .tienda-footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .tienda-header {
+    grid-area: header;
+    background-color: #fffb00;
+    color: black;
+    padding: 20px;
+    font-size: 24px;
+    display: flex; /* 🔥 
+    align-items: center; /* 
+    gap: 15px; /* 
+  }
+  
+   🔥
+  .//logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 🔥 redondea la imagen */
+    object-fit: cover; 
+    border: 2px solid black;
+  }
+  
+  .producto.destacado {
+  background-color: #ffd700;
+  transform: scale(1.1);
+  grid-column: span 2;
+  font-size: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tienda-header {
+  grid-area: header;
+  background-color: #fffb00;
+  color: black;
+  padding: 20px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;  
+  align-items: center;  
+  gap: 15px;            
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Oculta el menú lateral */
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr; /* tarjetas en columna */
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .users-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

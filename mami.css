@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  .tienda-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+      "header header"
+      "sidebar contenido"
+      "footer footer";
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Parte de arriba (Header) */
+  .tienda-header {
+    grid-area: header;
+    background-color: #fffb00;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Filtros a la izquierda */
+  .filtros {
+    grid-area: sidebar;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-right: 2px solid #ccc;
+  }
+  
+  /* Zona de productos */
+  .productos-grid {
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  /* Cada producto */
+  .producto {
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* El que está en oferta o destacado */
+  .destacado {
+    background-color: #ffd700;
+  }
+  
+  /* Parte de abajo (Footer) */
+  .tienda-footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  .imagen-producto {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .imagen-producto {
+    width: 5px;     /* 👈 Cambia este número para hacerla más pequeña o más grande */
+    height: auto;     /* Mantiene proporción */
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
